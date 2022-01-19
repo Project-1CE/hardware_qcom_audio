@@ -59,31 +59,6 @@ LOCAL_SANITIZE := integer_overflow
 endif
 include $(BUILD_SHARED_LIBRARY)
 
-# ---------------------------------------------------------------------------------
-#             Make the apps-test (mm-aenc-omxevrc-test)
-# ---------------------------------------------------------------------------------
-
-include $(CLEAR_VARS)
-
-mm-evrc-enc-test-inc    := $(LOCAL_PATH)/inc
-mm-evrc-enc-test-inc    += $(LOCAL_PATH)/test
-
-LOCAL_MODULE            := mm-aenc-omxevrc-test
-LOCAL_MODULE_TAGS       := optional
-LOCAL_CFLAGS            := $(libOmxEvrcEnc-def)
-LOCAL_CFLAGS            := -Wno-unused-local-typedef -Wno-shorten-64-to-32
-LOCAL_C_INCLUDES        := $(mm-evrc-enc-test-inc)
-LOCAL_PRELINK_MODULE    := false
-LOCAL_SHARED_LIBRARIES  := libmm-omxcore
-LOCAL_SHARED_LIBRARIES  += libOmxEvrcEnc
-LOCAL_VENDOR_MODULE     := true
-LOCAL_SRC_FILES         := test/omx_evrc_enc_test.c
-
-ifneq ($(filter kona lahaina holi,$(TARGET_BOARD_PLATFORM)),)
-LOCAL_SANITIZE := integer_overflow
-endif
-include $(BUILD_EXECUTABLE)
-
 endif
 
 # ---------------------------------------------------------------------------------
