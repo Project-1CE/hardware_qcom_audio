@@ -61,32 +61,6 @@ LOCAL_SANITIZE := integer_overflow
 endif
 include $(BUILD_SHARED_LIBRARY)
 
-
-# ---------------------------------------------------------------------------------
-#             Make the apps-test (mm-aenc-omxg711-test)
-# ---------------------------------------------------------------------------------
-
-include $(CLEAR_VARS)
-
-mm-g711-enc-test-inc   := $(LOCAL_PATH)/inc
-mm-g711-enc-test-inc   += $(LOCAL_PATH)/test
-
-LOCAL_MODULE            := mm-aenc-omxg711-test
-LOCAL_MODULE_TAGS       := optional
-LOCAL_CFLAGS            := $(libOmxG711Enc-def)
-LOCAL_CFLAGS            := -Wno-tautological-compare -Wno-unused-local-typedef
-LOCAL_C_INCLUDES        := $(mm-g711-enc-test-inc)
-LOCAL_PRELINK_MODULE    := false
-LOCAL_SHARED_LIBRARIES  := libmm-omxcore
-LOCAL_SHARED_LIBRARIES  += libOmxG711Enc
-LOCAL_VENDOR_MODULE     := true
-LOCAL_SRC_FILES         := test/omx_g711_enc_test.c
-
-ifneq ($(filter kona lahaina holi,$(TARGET_BOARD_PLATFORM)),)
-LOCAL_SANITIZE := integer_overflow
-endif
-include $(BUILD_EXECUTABLE)
-
 endif
 
 # ---------------------------------------------------------------------------------
