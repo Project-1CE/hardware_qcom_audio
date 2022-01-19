@@ -39,8 +39,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include<string.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
-#include "omx_g711_aenc.h"
-#include "omx_log.h"
+#include "../inc/omx_g711_aenc.h"
+#include "../inc/omx_log.h"
 #include <errno.h>
 
 using namespace std;

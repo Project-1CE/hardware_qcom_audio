@@ -38,7 +38,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include<string.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
-#include "omx_qcelp13_aenc.h"
+#include "../inc/omx_qcelp13_aenc.h"
 #include <errno.h>
 
 using namespace std;
