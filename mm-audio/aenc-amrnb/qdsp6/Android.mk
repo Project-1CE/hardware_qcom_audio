@@ -25,6 +25,7 @@ libOmxAmrEnc-def += -Wno-sign-conversion -Wno-shorten-64-to-32 -Wno-self-assign 
 include $(CLEAR_VARS)
 
 libOmxAmrEnc-inc       := $(LOCAL_PATH)/inc
+libOmxAmrEnc-inc       += $(TOP)/hardware/qcom/media/mm-core/inc
 
 LOCAL_MODULE             := libOmxAmrEnc
 LOCAL_MODULE_TAGS        := optional

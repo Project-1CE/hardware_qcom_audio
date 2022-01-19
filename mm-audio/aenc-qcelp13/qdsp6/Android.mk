@@ -25,6 +25,7 @@ libOmxQcelp13Enc-def += -Wno-sign-conversion -Wno-shorten-64-to-32 -Wno-self-ass
 include $(CLEAR_VARS)
 
 libOmxQcelp13Enc-inc       := $(LOCAL_PATH)/inc
+libOmxQcelp13Enc-inc       := $(TOP)/hardware/qcom/media/mm-core/inc
 
 LOCAL_MODULE             := libOmxQcelp13Enc
 LOCAL_MODULE_TAGS        := optional

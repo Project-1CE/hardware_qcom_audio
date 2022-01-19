@@ -25,6 +25,7 @@ libOmxG711Enc-def += -Wno-sign-conversion -Wno-shorten-64-to-32 -Wno-self-assign
 include $(CLEAR_VARS)
 
 libOmxG711Enc-inc       := $(LOCAL_PATH)/inc
+libOmxG711Enc-inc       += $(TOP)/hardware/qcom/media/mm-core/inc
 
 LOCAL_MODULE             := libOmxG711Enc
 LOCAL_MODULE_TAGS        := optional
