@@ -32,7 +32,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <fcntl.h>
 #include <errno.h>
 
-#include <aenc_svr.h>
+#include "../inc/aenc_svr.h"
 #include <unistd.h>
 
 /**

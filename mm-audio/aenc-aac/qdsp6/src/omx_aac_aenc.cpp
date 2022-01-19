@@ -38,7 +38,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include<string.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
-#include "omx_aac_aenc.h"
+#include "../inc/omx_aac_aenc.h"
 #include <errno.h>
 
 using namespace std;

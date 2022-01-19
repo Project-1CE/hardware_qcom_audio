@@ -25,6 +25,7 @@ libOmxEvrcEnc-def += -Wno-sign-conversion -Wno-shorten-64-to-32 -Wno-self-assign
 include $(CLEAR_VARS)
 
 libOmxEvrcEnc-inc       := $(LOCAL_PATH)/inc
+libOmxEvrcEnc-inc       += $(TOP)/hardware/qcom/media/mm-core/inc
 
 LOCAL_MODULE             := libOmxEvrcEnc
 LOCAL_MODULE_TAGS        := optional
