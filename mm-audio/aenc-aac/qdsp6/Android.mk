@@ -58,31 +58,6 @@ LOCAL_SANITIZE := integer_overflow
 endif
 include $(BUILD_SHARED_LIBRARY)
 
-# ---------------------------------------------------------------------------------
-#             Make the apps-test (mm-aenc-omxaac-test)
-# ---------------------------------------------------------------------------------
-
-include $(CLEAR_VARS)
-
-mm-aac-enc-test-inc    := $(LOCAL_PATH)/inc
-mm-aac-enc-test-inc    += $(LOCAL_PATH)/test
-
-LOCAL_MODULE            := mm-aenc-omxaac-test
-LOCAL_MODULE_TAGS       := optional
-LOCAL_CFLAGS            := $(libOmxAacEnc-def)
-LOCAL_CFLAGS            := -Wno-unused-local-typedef -Wno-shorten-64-to-32
-LOCAL_C_INCLUDES        := $(mm-aac-enc-test-inc)
-LOCAL_PRELINK_MODULE    := false
-LOCAL_SHARED_LIBRARIES  := libmm-omxcore
-LOCAL_SHARED_LIBRARIES  += libOmxAacEnc
-LOCAL_VENDOR_MODULE     := true
-LOCAL_SRC_FILES         := test/omx_aac_enc_test.c
-
-ifneq ($(filter kona lahaina holi,$(TARGET_BOARD_PLATFORM)),)
-LOCAL_SANITIZE := integer_overflow
-endif
-include $(BUILD_EXECUTABLE)
-
 endif
 
 # ---------------------------------------------------------------------------------
